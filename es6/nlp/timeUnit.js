@@ -40,12 +40,12 @@ class TimeUnit {
             }
         }
         /** 在处理小时这个级别时，如果上文时间是下午的且下文没有主动声明小时级别以上的时间，则也把下文时间设为下午 */
-        if (this.isFirstTimeSolveContext && checkTimeIndex === 3 && this._tpOrigin.tunit[3] >= 12 && this._tp.tunit[3] < 12) {
-            this._tp.tunit[3] += 12;
-        }
-        if (checkTimeIndex === 3 && (this._tpOrigin.tunit[3] > this._tp.tunit[3])) {
-            this._tp.tunit[3] += 12;
-        }
+        // if (this.isFirstTimeSolveContext && checkTimeIndex === 3 && this._tpOrigin.tunit[3] >= 12 && this._tp.tunit[3] < 12) {
+        //     this._tp.tunit[3] += 12;
+        // }
+        // if (checkTimeIndex === 3 && (this._tpOrigin.tunit[3] > this._tp.tunit[3])) {
+        //     this._tp.tunit[3] += 12;
+        // }
         this.isFirstTimeSolveContext = false;
     }
 
